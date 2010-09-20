@@ -1,0 +1,21 @@
+This is a Plone 4.0 build. 
+It REQUIRES Python 2.6.x.   !!!!!!
+
+
+This buildout wants a directory above this one.
+Create it by typing:
+
+  mkdir -p ../buildout-cache/{eggs,download}
+
+Then, type:
+   python bootstrap
+
+To run the development build, type:
+
+  ./bin/buildout -c dev.cfg -v
+
+Start it by typing:
+  ./bin/zeoserver start
+  ./bin/instance fg
+
+
