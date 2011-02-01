@@ -3,6 +3,10 @@
 # encoding: utf-8
 """
 fetch_xmls.py
+
+To run,
+ ./fetch_xml_loop.py > /web/log/fetchxml-errors.txt &
+
 """
 
 #import os

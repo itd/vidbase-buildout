@@ -2,8 +2,12 @@
 # -*- coding: utf-8 -*-
 # encoding: utf-8
 """
-fetch_xmls.py
+fetch_live_loop.py
 Grabs the live xml feed every 10 seconds
+
+
+./fetch_live_loop.py > /web/log/fetchlivexmls-errors.txt &
+
 """
 
 #import os
@@ -17,9 +21,9 @@ kytargetdir = '/home/msworks/www/kyxml/'
 kydtargetdir = '/home/msworks/gooch/'
 kyurlprefix = 'http://vid.mandsworks.com/ky/'
 
-xmls = [
 #    ('xmlsource','targetpath','outfile'),
-    (kyurlprefix+'kyannounce.iphoneannounce.xml',kytargetdir,'live.xml'),
+xmls = [
+    (kyurlprefix+'kyannounce/iphoneannounce.xml',kytargetdir,'live.xml'),
     ]
 
 def getNow():
@@ -51,7 +55,7 @@ def createfiles(xmls):
 def main():
     while 1 == 1:
         createfiles(xmls)
-        time.sleep(90)
+        time.sleep(10)
 
 
 if __name__ == '__main__':
